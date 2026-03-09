@@ -1,28 +1,81 @@
 # 🧠 Dan - Your Personal AI Assistant
 
-This is a Python-based AI assistant inspired by *Dan*, capable of:
+A real-time voice-powered AI assistant built with Python and LiveKit, inspired by the AI from Iron Man. Dan speaks like a classy butler, manages your life, and keeps things running smoothly.
 
-- 🔍 Searching the web  
-- 🌤️ Weather checking
-- 📨 Sending Emails 
-- 📷 Vision through camera (Web app
-- 🗣️ Speech
-- 📝 Chat (Web app) 
+## Features
 
-This agent uses LiveKit that is 100% free!
+- 🗣️ **Voice Conversations** — Real-time speech using Google Gemini Realtime
+- 🔍 **Web Search** — Search the internet via DuckDuckGo
+- 🌤️ **Weather** — Get current weather for any city
+- 📨 **Email** — Send emails through Gmail
+- 📝 **Task Management** — Add, list, complete, and delete to-do items
+- ⏰ **Reminders** — Set timed reminders with automatic notifications
+- 📅 **Calendar** — Manage events with natural date parsing
+- 💬 **SMS** — Send and receive text messages via Termii
+- 📞 **Phone Calls** — Make outbound calls and talk through the agent
+- 🧠 **Memory** — Remembers your preferences and personal info across sessions
+- 🔇 **Noise Cancellation** — Built-in background noise filtering
 
----
+## Prerequisites
 
-## 📽️ Tutorial Video
+- Python 3.10+
+- A [LiveKit Cloud](https://cloud.livekit.io) account (free tier available)
+- API keys for the services you want to use
 
-Before you start, **make sure to follow this tutorial to set up the voice agent correctly**:  
-🎥 [Watch here](https://youtu.be/An4NwL8QSQ4?si=v1dNDDonmpCG1Els)
+## Setup
 
----
-1. Create the Virtual Envrionment first!
-2. Activate it
-3. Install all the required libraries in the requirements.txt file
-4. In the .ENV - File you should paste your API-Keys and your LiveKit Secret, LiveKit URL.
-   If you want to use the Send Email Tool also specify your Gmail Account and App Password. 
-5. Make sure that your LiveKit Account is set-up correctly. 
+1. Clone the repo
+   ```bash
+   git clone https://github.com/obedav/Agent-Dan.git
+   cd Agent-Dan
+   ```
 
+2. Create and activate a virtual environment
+   ```bash
+   python -m venv venv
+   # Windows
+   venv\Scripts\activate
+   # macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file with your API keys
+   ```env
+   LIVEKIT_URL=your_livekit_url
+   LIVEKIT_API_KEY=your_api_key
+   LIVEKIT_API_SECRET=your_api_secret
+   GOOGLE_API_KEY=your_google_api_key
+
+   # Optional - for email
+   GMAIL_USER=your_email@gmail.com
+   GMAIL_APP_PASSWORD=your_app_password
+
+   # Optional - for SMS
+   TERMII_API_KEY=your_termii_key
+
+   # Optional - for phone calls
+   LIVEKIT_SIP_TRUNK_ID=your_sip_trunk_id
+   ```
+
+5. Make sure your LiveKit Cloud account is set up correctly
+
+## Usage
+
+```bash
+python agent.py dev
+```
+
+Then open the [LiveKit Playground](https://cloud.livekit.io/playground) to connect and start talking to Dan.
+
+## Tech Stack
+
+- **LiveKit Agents** — Real-time voice agent framework
+- **Google Gemini** — Realtime LLM for conversation
+- **DuckDuckGo** — Web search
+- **Termii** — SMS messaging
+- **LiveKit SIP** — Phone call support

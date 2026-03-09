@@ -1,6 +1,6 @@
-# 🧠 Friday - Your Personal AI Assistant
+# 🧠 Dan - Your Personal AI Assistant
 
-This is a Python-based AI assistant inspired by *Jarvis*, capable of:
+This is a Python-based AI assistant inspired by *Dan*, capable of:
 
 - 🔍 Searching the web  
 - 🌤️ Weather checking
